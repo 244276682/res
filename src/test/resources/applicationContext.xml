@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd
+	http://www.springframework.org/schema/aop
+	http://www.springframework.org/schema/aop/spring-aop.xsd
+	http://www.springframework.org/schema/tx
+	http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+    <context:component-scan base-package="com.lf" />
+    <aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+
+    <!--
+        <aop:config>
+            &lt;!&ndash; 配置切入点
+                public void cn.itcast.service.UserServiceImpl.save()
+                void cn.itcast.service.UserServiceImpl.save()
+                * cn.itcast.service.UserServiceImpl.save()
+                * cn.itcast.service.UserServiceImpl.*()
+
+                * cn.itcast.service.*ServiceImpl.*(..)
+                * cn.itcast.service..*ServiceImpl.*(..)
+            &ndash;&gt;
+            <aop:pointcut expression="execution(* *.*(..))" id="pc"/>
+            <aop:aspect ref="advice" >
+                &lt;!&ndash; 指定名为before方法作为前置通知 &ndash;&gt;
+                <aop:before method="before" pointcut-ref="pc" />
+                &lt;!&ndash; 后置  出现异常不会调用&ndash;&gt;
+                <aop:after-returning method="afterReturning" pointcut-ref="pc" />
+                &lt;!&ndash; 环绕通知 &ndash;&gt;
+                <aop:around method="around" pointcut-ref="pc" />
+                &lt;!&ndash; 异常拦截通知 &ndash;&gt;
+                <aop:after-throwing method="afterException" pointcut-ref="pc"/>
+                &lt;!&ndash; 后置 出现异常也会调用&ndash;&gt;
+                <aop:after method="after" pointcut-ref="pc"/>
+            </aop:aspect>
+        </aop:config>-->
+
+
+</beans>
